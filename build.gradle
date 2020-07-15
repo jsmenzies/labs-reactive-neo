@@ -24,10 +24,8 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
-    implementation 'org.springframework.boot:spring-boot-starter-data-neo4j'
 
-    implementation 'org.neo4j.driver:neo4j-java-driver-spring-boot-starter:+'
-    implementation 'org.neo4j:neo4j-ogm-bolt-driver:+'
+    implementation 'org.neo4j.springframework.data:spring-data-neo4j-rx-spring-boot-starter:+'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

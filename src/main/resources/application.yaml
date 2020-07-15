@@ -11,9 +11,14 @@ org:
           hostname-verification-enabled: true
           strategy: trust_system_ca_signed_certificates
 
+
 management:
   endpoints:
     enabled-by-default: true
   endpoint:
     health:
       show-details: always
+
+logging:
+  level:
+    org.neo4j.springframework.data: DEBUG
