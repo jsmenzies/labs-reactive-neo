@@ -1,5 +1,6 @@
 package io.menzies.labs.rx.neo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 import org.neo4j.springframework.data.core.schema.GeneratedValue;
@@ -8,7 +9,7 @@ import org.neo4j.springframework.data.core.schema.Node;
 import org.neo4j.springframework.data.core.schema.Property;
 import org.neo4j.springframework.data.core.schema.Relationship;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -17,13 +18,21 @@ import java.util.List;
 public class Customer {
 
     @Id
+    @JsonIgnore
     @GeneratedValue
     private Long id;
 
     @Property
-    private String name;
+    private String email;
 
+    @Property
+    private LocalDate joinedDate;
+
+    @Property
+    private List<String> countries;
+
+    @JsonIgnore
     @Builder.Default
     @Relationship(type = "LINKED")
-    private List<Customer> linked = new ArrayList<>();
+    private List<Customer> linked;
 }
