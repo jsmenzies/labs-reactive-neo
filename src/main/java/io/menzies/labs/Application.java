@@ -1,4 +1,4 @@
-package io.menzies.labs.reactive.neo;
+package io.menzies.labs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,19 @@
+org:
+  neo4j:
+    driver:
+      uri: 'bolt://localhost:7687'
+      authentication:
+        username: neo4j
+        password: secret
+      config:
+        encrypted: false
+        trust-settings:
+          hostname-verification-enabled: true
+          strategy: trust_system_ca_signed_certificates
+
+management:
+  endpoints:
+    enabled-by-default: true
+  endpoint:
+    health:
+      show-details: always
